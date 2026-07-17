@@ -6,23 +6,28 @@ import dev3 from '../assets/team/dev3.jpg';
 const teamMembers = [
   {
     name: 'Maria Y. Gomez Ruiz',
-    role: 'Desarrollador Full-Stack',
+    role: 'Desarrolladora Full-Stack',
     imageUrl: dev1,
+    facebook: 'https://www.facebook.com/profile.php?id=61591538581869&mibextid=ZbWKwL',
+    linkedin: 'https://www.linkedin.com/in/maría-yolet-gómez-ruiz-9a15923aa?utm_source=share_via&utm_content=profile&utm_medium=member_android',
   },
   {
     name: 'Geovany G. Gomez Rodas',
     role: 'Desarrollador Full-Stack',
     imageUrl: dev2,
+    facebook: 'https://www.facebook.com/profile.php?id=61591538581869&mibextid=ZbWKwL',
+    linkedin: 'https://www.linkedin.com/in/geovany-guadalupe-gómez-rodas-087b652a0',
   },
   {
     name: 'Jorge A. Pozo Nulutahua',
     role: 'Diseñador UI/UX',
     imageUrl: dev3,
+    facebook: 'https://www.facebook.com/profile.php?id=61591538581869&mibextid=ZbWKwL',
+    linkedin: 'https://www.linkedin.com/in/jorge-adid-pozo-7935b23aa?utm_source=share_via&utm_content=profile&utm_medium=member_android',
   },
 ];
 
-// Sección de equipo para la landing page de IroZumi.
-// Mantiene la estética premium oscura con tarjetas redondeadas y tipografía limpia.
+
 const TeamSection = () => {
   return (
     <section id="equipo" className="bg-[#05070d] py-16 text-white sm:py-20">
@@ -55,18 +60,24 @@ const TeamSection = () => {
                 <div className="mt-8 space-y-3 text-center">
                   <h3 className="text-xl font-semibold text-white">{member.name}</h3>
                   <p className="text-sm text-slate-400">{member.role}</p>
+                  
+                  {/* Bloque de botones alineado */}
                   <div className="mt-5 flex items-center justify-center gap-4 text-slate-300">
                     <a
-                      href="#"
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm transition hover:bg-cyan-400/10 hover:text-cyan-100"
+                      href={member.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs transition hover:bg-cyan-400/10 hover:text-cyan-100"
                     >
-                      GitHub
+                      Facebook
                     </a>
                     <a
-                      href="#"
-                      className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-sm transition hover:bg-cyan-400/10 hover:text-cyan-100"
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-2 text-xs transition hover:bg-cyan-400/10 hover:text-cyan-100"
                     >
-                      Portafolio
+                      LinkedIn
                     </a>
                   </div>
                 </div>
