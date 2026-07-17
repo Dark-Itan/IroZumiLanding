@@ -115,30 +115,33 @@ const Navbar = () => {
           </div>
         </div>
       )}
-
-      {showComingSoon &&
+{showComingSoon &&
         createPortal(
-          <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm">
-            <div className="rounded-[2rem] bg-slate-950 border border-white/10 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] max-w-md mx-4">
-              <h3 className="text-2xl font-semibold text-white mb-4">Disponible próximamente</h3>
-              <p className="text-slate-300 mb-6">
-                Regístrate para recibir una notificación cuando esté lista.
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/50 backdrop-blur-sm px-4">
+            <div className="rounded-[2rem] bg-slate-950 border border-white/10 p-8 shadow-[0_30px_80px_rgba(0,0,0,0.35)] max-w-md w-full text-center">
+              <h3 className="text-2xl font-bold text-white mb-2">¡IroZumi ya está aquí!</h3>
+              
+              <div className="inline-block rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-400 border border-cyan-500/20 mb-4">
+                Versión 1.1
+              </div>
+              
+              <p className="text-slate-300 mb-8 text-sm">
+                Descarga la versión actual para Android y comienza a usarla.
               </p>
+              
               <div className="space-y-3">
-                <button
-                  onClick={() => {
-                    setShowComingSoon(false);
-                    setTimeout(() => {
-                      document.getElementById('soporte')?.scrollIntoView({ behavior: 'smooth' });
-                    }, 300);
-                  }}
-                  className="w-full rounded-lg bg-cyan-500/20 border border-cyan-300/40 px-4 py-3 text-white font-semibold transition hover:bg-cyan-500/30 hover:border-cyan-300/60"
-                >
-                  Notificarme
-                </button>
-                <button
+                <a 
+                  href="https://github.com/Dark-Itan/IroZumi-backend/releases/download/v1.0.0/app-release.apk"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full rounded-lg bg-cyan-500 py-3 font-semibold text-slate-950 transition hover:bg-cyan-400 active:scale-95"
                   onClick={() => setShowComingSoon(false)}
-                  className="w-full rounded-lg border border-white/10 px-4 py-3 text-white font-semibold transition hover:bg-white/5"
+                >
+                  Descargar App (APK)
+                </a>
+                <button 
+                  onClick={() => setShowComingSoon(false)}
+                  className="w-full rounded-lg border border-white/10 py-3 text-slate-400 font-semibold transition hover:bg-white/5 hover:text-white"
                 >
                   Cerrar
                 </button>
