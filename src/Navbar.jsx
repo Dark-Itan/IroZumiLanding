@@ -131,7 +131,7 @@ const Navbar = () => {
               
               <div className="space-y-3">
                 <a 
-                  href="https://github.com/Dark-Itan/IroZumi-backend/releases/download/v1.0.0/app-release.apk"
+                  href="https://github.com/Dark-Itan/IroZumi-backend/releases/download/1.2/app-release.apk"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full rounded-lg bg-cyan-500 py-3 font-semibold text-slate-950 transition hover:bg-cyan-400 active:scale-95"
